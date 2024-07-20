@@ -72,6 +72,30 @@ namespace CaptureEncoder
                 _session.IsCursorCaptureEnabled = includeCursor;
             }
             _session.StartCapture();
+                    StartAudioCapture();
+    }
+
+    private void OnFrameArrived(Direct3D11CaptureFrame frame)
+    {
+        StopAudioCapture()
+        CombineAudioVideo(capturedAudioData, frame);
+    }
+    private void StartAudioCapture()
+    {
+
+    }
+
+    private void StopAudioCapture()
+    {
+
+    }
+
+    private void CombineAudioVideo(byte[] audioData, Direct3D11CaptureFrame frame)
+    {
+
+    }
+}
+
         }
 
         private void InitializeComposeTexture(SizeInt32 size)
